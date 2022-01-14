@@ -26,7 +26,7 @@ public class CountingCharacters {
             e.printStackTrace();
         }
 
-        //make text case insensitive
+        //make text case-insensitive
         text = text.toLowerCase(Locale.ROOT);
 
         //remove non-letters from text
@@ -38,7 +38,7 @@ public class CountingCharacters {
         }
         text = trimmedText;
 
-        HashMap<Character, Integer> map = new HashMap<Character, Integer>();
+        HashMap<Character, Integer> map = new HashMap<>();
         for(int i = 0; i < text.length(); i++) {
             if (map.containsKey(text.charAt(i))) {
                 map.put(text.charAt(i), map.get(text.charAt(i)) + 1);
