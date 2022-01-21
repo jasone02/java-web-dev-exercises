@@ -17,4 +17,23 @@ public class Menu {
     public Date getLastUpdated() {
         return lastUpdated;
     }
+
+    public void addMenuItem(MenuItem item) {
+        menu.add(item);
+        lastUpdated = new Date();
+    }
+    public void removeMenuItem(String name) {
+        for (int i = 0; i < menu.size(); i++) {
+            if (menu.get(i).getName() == name) {
+                menu.remove(i);
+            }
+        }
+        lastUpdated = new Date();
+    }
+
+    public void print() {
+        for (int i = 0; i < menu.size(); i++) {
+            menu.get(i).print();
+        }
+    }
 }
